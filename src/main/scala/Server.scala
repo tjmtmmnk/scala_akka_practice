@@ -18,12 +18,12 @@ object Server extends App with DogRoutes with DogDao {
 
   ddl.onComplete {
     _ =>
-      create(Dog("Bailey"))
-      create(Dog("Max"))
-      create(Dog("Charlie"))
-      create(Dog("Bella"))
-      create(Dog("Lucy"))
-      create(Dog("Molly"))
+//      create(Dog("Bailey"))
+//      create(Dog("Max"))
+//      create(Dog("Charlie"))
+//      create(Dog("Bella"))
+//      create(Dog("Lucy"))
+//      create(Dog("Molly"))
       val bindingFuture = Http().bindAndHandle(routes, "localhost", 8080)
       println(s"Server online at http://localhost:8080/\nPress RETURN to stop...")
       StdIn.readLine()
